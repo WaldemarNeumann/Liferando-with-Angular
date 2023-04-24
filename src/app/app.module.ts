@@ -8,7 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { MenuContainerComponent } from './menu-container/menu-container.component';
 import { ShoppingCardContainerComponent } from './shopping-card-container/shopping-card-container.component';
-import { OrderContainerComponent } from './order-container/order-container.component';
+
 
 import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MainPageComponent,
     MenuContainerComponent,
     ShoppingCardContainerComponent,
-    OrderContainerComponent
+   
   ],
   imports: [
     BrowserModule,

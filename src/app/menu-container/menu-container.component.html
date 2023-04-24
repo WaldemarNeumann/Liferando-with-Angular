@@ -54,7 +54,7 @@
         <h3>Beliebte Gerichte</h3>
 
         <div class="meal" *ngFor="let menu of menus; let i = index">
-            <p class="addButton">+</p>
+            <p class="addButton" (click)="addMenu(i)">+</p>
 
             <h4>{{ menu["title"] }}</h4>
 

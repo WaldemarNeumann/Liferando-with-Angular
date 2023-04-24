@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Menu {
+  title: string;
+  selection?: string;
+  description?: string;
+  price: string;
+}
+
 @Component({
   selector: 'app-menu-container',
   templateUrl: './menu-container.component.html',
@@ -15,8 +22,11 @@ export class MenuContainerComponent implements OnInit{
     
   }
 
+  selectedMenuIndex: number = 0;
+  currentMenu: Menu[] = [];
 
-  menus = [
+
+  menus: Menu[] = [
     {
       title: 'Döner-Tasche',
       selection: 'mit einer Fleischsorte, Salat, Cocktail und Tzatziki',
@@ -56,5 +66,17 @@ export class MenuContainerComponent implements OnInit{
     }
  
   ];
+  
+  addMenu(index: number) {
+    const selectedMenu = this.menus[index];
+    if (this.currentMenu.some(menu => menu.title === selectedMenu.title)) {
+      // do not add duplicate menu
+      return;
+    }
+    this.selectedMenuIndex = index;
+    this.currentMenu.push(selectedMenu);
+    console.log('Menu wurde gepusht', this.currentMenu)
+  }
+ 
 
 }
