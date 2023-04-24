@@ -1,0 +1,70 @@
+<div class="menu-main-div">
+    <diV class="img-container">
+        <img src="../assets/img/picture1.jpg">
+    </diV>
+
+    <div class="pd-70">
+        <h2>Avanti Restaurant</h2>
+
+    </div>
+
+
+    <div class="pd-70 menu-div">
+        <div class="reviews">
+            <img src="../assets/img/star.png">
+            <img src="../assets/img/star.png">
+            <img src="../assets/img/star.png">
+            <img src="../assets/img/star.png">
+            <img src="../assets/img/outline-star.png">
+        </div>
+
+        <p>(266 Bewertungen)</p>
+
+    </div>
+
+    <div class="pd-70 main-info-div">
+        <div class="info-div">
+            <img src="../assets/img/clock.png">
+            <p>Ab 11:00 Uhr</p>
+        </div>
+
+        <div class="info-div">
+            <img src="../assets/img/motorcycle.png">
+            <p>Kostenlos</p>
+        </div>
+
+        <div class="info-div">
+            <img src="../assets/img/bag.png">
+            <p>Min. 15.00€</p>
+        </div>
+
+    </div>
+
+    <div class="menu-bar">
+        <ul>
+            <li>Beliebte Gerichte</li>
+            <li>Salate</li>
+            <li>Pizzabrötchen</li>
+
+        </ul>
+
+    </div>
+
+    <div class="pd-70 favorite-meal">
+        <h3>Beliebte Gerichte</h3>
+
+        <div class="meal" *ngFor="let menu of menus; let i = index">
+            <p class="addButton">+</p>
+
+            <h4>{{ menu["title"] }}</h4>
+
+            <p>{{ menu["selection"] }}</p>
+
+            <p>{{ menu["description"] }}</p>
+
+            <p>{{ menu["price"] }}</p>
+
+        </div>
+    </div>
+
+</div>

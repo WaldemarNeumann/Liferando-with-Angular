@@ -1,0 +1,25 @@
+.header-div {
+    height: 100px;
+    background-color: orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    h3 {
+        text-decoration: underline;
+    }
+}
+
+.header-flag {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.header-menu {
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
